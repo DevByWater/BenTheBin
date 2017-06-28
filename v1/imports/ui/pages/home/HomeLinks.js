@@ -5,10 +5,10 @@ class HomeLinks extends Component {
         return (
              <div className="container">
                    <div className="col-sm-6">
-                        <a className="btn btn-lg btn-home-reg" href="/signup">Sign Up</a>
+                        <a className="btn btn-lg btn-home-reg" href="/auth/signup">Sign Up</a>
                    </div>
                     <div className="col-sm-6">
-                        <a className="btn btn-lg btn-home-login" href="/login">Log In</a>
+                        <a className="btn btn-lg btn-home-login" href="/auth/login">Log In</a>
                    </div>
             </div>
         )

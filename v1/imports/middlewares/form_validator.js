@@ -1,5 +1,5 @@
 
-const FormValidator = {
+export default FormValidator = {
     passwordFormat: /(?=.*\d)(?=.*[A-Z]).{8,}/,
     emailFormat: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
     error_message: {
@@ -28,5 +28,3 @@ const FormValidator = {
     }
 
 }
-
-export default FormValidator

@@ -23,7 +23,7 @@ class Header extends Component {
         if(!this.props.authenticated){
             return(
                 <li>
-                    <a href="/login">Log In</a>
+                    <a href="/auth/login">Log In</a>
                 </li>    
             )
         }
