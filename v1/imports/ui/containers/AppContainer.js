@@ -8,7 +8,7 @@ export default class AppContainer extends Component {
         super(props)
 
         this.state = this.getMeteorData()
-        this.logout = this.logout.bind(this)
+
     }
 
     getMeteorData(){
@@ -28,9 +28,12 @@ export default class AppContainer extends Component {
     }
 
     render(){
-        <div className='app-container'>
-            <Header authenticated={this.state.isAuthenticated}/>
-            {this.props.children}
-        </div>
+        return (
+                <div className='app-container'>
+                    <Header authenticated={this.state.isAuthenticated}/>
+                    {this.props.children}
+                </div>
+            )
+
     }
 }

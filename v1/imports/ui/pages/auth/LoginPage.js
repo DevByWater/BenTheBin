@@ -18,13 +18,16 @@ export default class LoginPage extends Component {
 
         let email = this.refs.email.value
         let password = this.refs.password.value
+        let url = '/bins/dashboard'
         Meteor.loginWithPassword(email, password, (err) =>{
             if(err){
                 this.setState({
                     error: err.reason
                 })
+                console.log(this.state.error)
             } else {
-                browserHistory.push('/')
+                console.log('user logged in')
+                browserHistory.push(url)
             }
         })
     }
@@ -49,7 +52,7 @@ export default class LoginPage extends Component {
                 </div>
                 <div className="form-group container form-redirect-link-container">
                     <div className="col-xs-6">
-                        <a href="/signup">Need to register?</a>
+                        <a href="/auth/signup">Need to register?</a>
                     </div>
                     <div className="col-xs-6">
                          <a href="#">Forgot password?</a>

@@ -23,11 +23,11 @@ class SignupPage extends Component{
     handleSubmit(event){
         event.preventDefault()
 
-            let email = this.refs.email.value
+            let  email  = this.refs.email.value
             let  username = this.refs.username.value
             let  password = this.refs.password.value
             let  confirm_password = this.refs.confirm_password.value
-            let  url = `/bins`
+            let  url = `/bins/dashboard`
               
         if(!FormValidator.checkEmailFormat(email)){
                FormValidator.emailFormatError()
@@ -46,17 +46,19 @@ class SignupPage extends Component{
         Accounts.createUser({ email, username, password}, (error)=>{
             if(error){
                  this.setState({error_reason: {default: error.reason} })
+                 console.log(this.state.error_reason)
                  return
             } else {
                 this.setState({error_reason : { default: '', pwdFormat: '', pwdMatch: '', email: '', username: ''}})
-                return browserHistory.push(url)
+                console.log('user created')
+                browserHistory.push(url)
             }
 
         })
     }
     render(){
         return (
-            <form onSubmit={this.createUser}> 
+            <form onSubmit={this.handleSubmit}>
                 <div className="error-group danger error-span">{this.state.error_reason.default}</div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
@@ -85,7 +87,7 @@ class SignupPage extends Component{
                     </button>
                 </div>
                 <div className="form-group">
-                    <a href="/login">Already have an account?</a>
+                    <a href="/auth/login">Already have an account?</a>
                 </div>
             </form>
         )
