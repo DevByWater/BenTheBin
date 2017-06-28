@@ -2,13 +2,12 @@ import { Mongo } from 'meteor/mongo'
 
 
 Meteor.methods({
-    'bins.insert': function(fileName, mode){
+    'bins.insert': function(binName){
         return Bins.insert({
             createdAt: new Date(),
             sharedWith: [],
             content: '',
-            mode: mode,
-            name: fileName,
+            name: binName,
             owner_id: this.userId,
         })
     },

@@ -18,7 +18,7 @@ export default class LoginPage extends Component {
 
         let email = this.refs.email.value
         let password = this.refs.password.value
-        let url = '/bins/dashboard'
+        let url = '/in/bins/dashboard'
         Meteor.loginWithPassword(email, password, (err) =>{
             if(err){
                 this.setState({

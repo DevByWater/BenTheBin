@@ -1,32 +1,39 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Dashboard from "./dash/Dashboard";
 
 export default class MainPage extends Component {
   constructor(props) {
-    super(props)
-    this.state = {
-      username: ''
-    }
+      super(props)
   }
+
+
+
+
 
   render() {
     let currentUser = this.props.currentUser
     let userDataAvailable = (currentUser !== undefined)
     let loggedIn = (currentUser && userDataAvailable)
+    let bins = this.props.bins
+
+    if(!loggedIn || !bins)  {
+      return(
+          <div className="binsMain">
+            <h2>Loading...</h2>
+          </div>
+      )
+    }
 
     return (
       <div className="binsMain">
-        <div className="col-xs-12 col-sm-6">
-          <h1 className="text-center">
-            { loggedIn ? `Welcome ${currentUser.username}` : '' }
-          </h1>
-        </div>
-          {this.props.children}
+          <Dashboard current_user={currentUser} binList={bins}/>
       </div>
     );
   }
 };
 
 MainPage.propTypes = {
-  currentUser: PropTypes.object  
+  currentUser: PropTypes.object,
+  bins: PropTypes.array
 }
