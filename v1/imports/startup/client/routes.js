@@ -15,9 +15,9 @@ export const renderRoutes = () => (
     <Router history={browserHistory}>
         <Route path="/" component={HomePage} />
         <Route path="auth/:action" component={AuthPage} />
-        <Route path='bins' component={AppContainer}>
-            <Route component={MainContainer} />
-                <Route path='dashboard' component={Dashboard} />
+        <Route path='app' component={AppContainer}>
+            <Route path="/bins" component={MainContainer} />
+                <Route path="dashboard" component={Dashboard} />
                 <Route path='workplace' component={Workplace} /> 
             <Route />    
         </Route>

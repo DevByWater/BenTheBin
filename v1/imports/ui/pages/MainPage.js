@@ -21,6 +21,7 @@ export default class MainPage extends Component {
             { loggedIn ? `Welcome ${currentUser.username}` : '' }
           </h1>
         </div>
+          {this.props.children}
       </div>
     );
   }
