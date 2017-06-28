@@ -15,8 +15,8 @@ export default class MainPage extends Component {
     let loggedIn = (currentUser && userDataAvailable)
 
     return (
-      <div>
-        <div className="container">
+      <div className="binsMain">
+        <div className="col-xs-12 col-sm-6">
           <h1 className="text-center">
             { loggedIn ? `Welcome ${currentUser.username}` : '' }
           </h1>

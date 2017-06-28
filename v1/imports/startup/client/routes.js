@@ -6,7 +6,7 @@ import AppContainer from '../../ui/containers/AppContainer'
 import MainContainer from '../../ui/containers/MainContainer'
 
 //pages
-import AuthPage from '../../ui/auth/AuthPage'
+import AuthPage from '../../ui/pages/auth/AuthPage'
 import HomePage from '../../ui/pages/home/HomePage'
 import Dashboard from '../../ui/pages/dash/Dashboard'
 import Workplace from '../../ui/pages/dash/Workplace'
@@ -16,9 +16,10 @@ export const renderRoutes = () => (
         <Route path="/" component={HomePage} />
         <Route path="auth/:action" component={AuthPage} />
         <Route path='bins' component={AppContainer}>
-            <IndexRoute component={MainContainer} />
-            <Route path='dashboard' component={Dashboard} />
-            <Route path='workplace' component={Workplace} /> 
+            <Route component={MainContainer} />
+                <Route path='dashboard' component={Dashboard} />
+                <Route path='workplace' component={Workplace} /> 
+            <Route />    
         </Route>
     </Router>
 )
