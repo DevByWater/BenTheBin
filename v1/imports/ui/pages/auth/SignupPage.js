@@ -27,7 +27,7 @@ class SignupPage extends Component{
             let  username = this.refs.username.value
             let  password = this.refs.password.value
             let  confirm_password = this.refs.confirm_password.value
-            let  url = `/bins/dashboard`
+            let  url = `/in/dash`
               
         if(!FormValidator.checkEmailFormat(email)){
                FormValidator.emailFormatError()

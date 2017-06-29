@@ -16,8 +16,9 @@ export default class MainPage extends Component {
     let userDataAvailable = (currentUser !== undefined)
     let loggedIn = (currentUser && userDataAvailable)
     let bins = this.props.bins
+    let binsUp = (bins !== undefined)
 
-    if(!loggedIn || !bins)  {
+    if(!loggedIn || !binsUp)  {
       return(
           <div className="binsMain">
             <h2>Loading...</h2>

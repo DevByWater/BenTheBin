@@ -4,12 +4,13 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 //containers
 import AppContainer from '../../ui/containers/AppContainer'
 import MainContainer from '../../ui/containers/MainContainer'
+import WorkplaceContainer from '../../ui/containers/WorkplaceContainer'
 
 //pages
 import AuthPage from '../../ui/pages/auth/AuthPage'
 import HomePage from '../../ui/pages/home/HomePage'
-import Dashboard from '../../ui/pages/dash/Dashboard'
-import Workplace from '../../ui/pages/workplace/Workplace'
+
+
 
 export const renderRoutes = () => (
     <Router history={browserHistory}>
@@ -17,7 +18,7 @@ export const renderRoutes = () => (
         <Route path="auth/:action" component={AuthPage} />
         <Route path="in" component={AppContainer}>
             <Route path="dash" component={MainContainer} />
-                <Route path="workplace" component={Workplace} />
+                <Route path="/workplace/:binName" component={WorkplaceContainer} />
             <Route />    
         </Route>
     </Router>

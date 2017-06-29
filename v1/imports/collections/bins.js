@@ -6,9 +6,9 @@ Meteor.methods({
         return Bins.insert({
             createdAt: new Date(),
             sharedWith: [],
-            content: '',
+            content: "",
             name: binName,
-            owner_id: this.userId,
+            owner_id: this.userId
         })
     },
 
@@ -19,8 +19,8 @@ Meteor.methods({
     'bins.update': function(bin, newContent){
         return Bins.update(bin._id, { $set: {content: newContent}})
     },
-    'bins.updateFiles': function(bin, newFile){
-        return Bins.update(bin._id, { $push: { files: newFile}})
+    'bins.load': function(b){
+        return Bins.find()
     },
 
     'bins.share': function(bin, email){

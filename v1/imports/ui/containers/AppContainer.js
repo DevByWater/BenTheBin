@@ -7,11 +7,11 @@ export default class AppContainer extends Component {
     constructor(props){
         super(props)
 
-        this.state = this.getMeteorData()
+        this.state = this.getAuthenticated()
 
     }
 
-    getMeteorData(){
+    getAuthenticated(){
         return { isAuthenticated: Meteor.userId() !== null }
     }
 

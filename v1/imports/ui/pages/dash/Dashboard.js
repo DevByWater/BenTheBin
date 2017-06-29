@@ -5,7 +5,7 @@ import DashBinList from './DashBinList'
 
 
 export default class Dashboard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
     render(){
@@ -15,7 +15,7 @@ export default class Dashboard extends Component {
                     <DashProfile currentUser={this.props.current_user}/>
                 </div>
                 <div className="col-xs-12 col-sm-6">
-                    <DashBinList bins={this.props.binList}/>
+                    <DashBinList bins={this.props.binList} currentUser={this.props.current_user}/>
                 </div>
             </div>
         )
