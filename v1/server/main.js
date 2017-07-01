@@ -8,6 +8,7 @@ Meteor.startup(() => {
     return Bins.find({ owner_id: this.userId})
   })
 
+
   Meteor.publish('sharedBins', function(){
     const user = Meteor.users.findOne(this.userId)
 
@@ -19,4 +20,5 @@ Meteor.startup(() => {
       sharedWith: { $elemMatch: { $eq: email }}
     })
   })
+
 });

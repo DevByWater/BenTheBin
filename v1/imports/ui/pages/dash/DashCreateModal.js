@@ -50,8 +50,14 @@ export default class DashCreateModal extends Component{
                             <div className="row">
                                 <div
                                     className="col-xs-6 modalFileSelector">
-                                    <img src="/img/frontend3.png" className="modalImage"/>
-                                    <h3>Front End Fun</h3>
+                                    <img src="/img/html5.png" className="modalImage"/>
+                                </div>
+                                <div
+                                    className="col-xs-6 modalFileSelector">
+                                    <img src="/img/markdown.png" className="modalImage"/>
+                                </div>
+                                <div className="modalFileHeader">
+                                    <h4>Text -> Html & Markdown</h4>
                                 </div>
                             </div>
                         </div>

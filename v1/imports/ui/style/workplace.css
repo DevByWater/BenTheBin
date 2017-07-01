@@ -5,6 +5,21 @@
 .workplace-container{
     text-align: center;
 }
+div.bins-share{
+    background-color: rgba(116, 208, 236, 0.89);
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.share-btn{
+    border-radius: 5px;
+    background-color:#ff7575;
+    color: #000;
+    font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;
+}
+.share-btn:hover{
+    background-color: #fea6a7;
+}
 
 .workplace-container > .header {
     font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;

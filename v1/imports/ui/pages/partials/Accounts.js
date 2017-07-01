@@ -33,8 +33,7 @@ class Accounts extends Component {
                     <span className="caret"></span>
                 </button>
                 <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="/in/dash">Home</a></li>
                     <li role="separator" className="divider"></li>
                     <li><a href="#" onClick={this.logOut}>Sign Out</a></li>
                 </ul>

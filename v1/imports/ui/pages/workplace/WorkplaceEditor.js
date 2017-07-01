@@ -3,6 +3,7 @@ import RichTextEditor, { EditorValue } from 'react-rte'
 import autobind from 'class-autobind'
 
 
+
 export default class WorkplaceEditor extends Component{
     constructor(props){
         super(props)
@@ -76,7 +77,6 @@ export default class WorkplaceEditor extends Component{
                         rows="10"
                     />
                 </div>
-
             </div>
         )
     }

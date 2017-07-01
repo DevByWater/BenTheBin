@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Bins } from '../../collections/bins'
 import WorkplaceEditor from '../pages/workplace/WorkplaceEditor'
+import WorkplaceShare from '../pages/workplace/WorkplaceShare'
 
 import '../style/workplace.css'
 
@@ -23,12 +24,14 @@ class WorkplaceContainer extends Component {
                 </div>
             )
         }
+        console.log('Props from work container: ', this.props)
         return(
             <div className="workplace-container">
                 <h1 className="header">Workplace</h1>
                 <div className="col-xs-12">
-                    <WorkplaceEditor bin={bin} />
+                    <WorkplaceEditor bin={bin} currentUser={this.props.currentUser}  />
                 </div>
+                    <WorkplaceShare bin={bin}/>
             </div>
         )
     }
