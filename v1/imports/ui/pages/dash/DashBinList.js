@@ -20,8 +20,8 @@ export default class DashBinList extends Component{
             const url = `/workplace/${bin.name}`
             return (
                 <li className="list-group-item binList-item" key={bin.name}>
-                    <Link to={url}>{bin.name}</Link>
-                    <span className="pull-right">
+                    <Link className="list-bin-name" to={url}>{bin.name}</Link>
+                    <span className="align-right pull-right">
                         <span className="shared-count">
                             <i className="fa fa-users" aria-hidden="true"></i>
                             {bin.sharedWith.length}
@@ -43,13 +43,13 @@ export default class DashBinList extends Component{
     render(){
         if(this.props.bins.length > 0){
             return (
-                <div className='container'>
-                    <div className="row create-bin-row">
-                        <button className="btn form_button" data-toggle="modal" data-target="#createBinModal">
-                            <i className="fa fa-plus"></i> Create Bin
-                        </button>
-                    </div>
-                    <div className="container binList">
+                <div className='bin-list-container'>
+                    <div className="binList">
+                        <div className="create-bin-row">
+                            <button className="btn form_button" data-toggle="modal" data-target="#createBinModal">
+                                <i className="fa fa-plus"></i> Create Bin
+                            </button>
+                        </div>
                         <h1 className="bin-headers">Your Bins</h1>
                         <ul className="list-group">
                             {this.renderList()}

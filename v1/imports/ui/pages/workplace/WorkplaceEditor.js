@@ -21,31 +21,7 @@ export default class WorkplaceEditor extends Component{
         let { value, format } = this.state
         return(
             <div className="col-xs-12">
-
-                <div className="col-xs-12 col-sm-6 editor-pane">
-                    <h3>Editor</h3>
-                    <RichTextEditor
-                        className="react-rte"
-                        toolbarClassName="rte-toolbar"
-                        editorClassName="rte-editor"
-                        placeholder="Type away"
-                        value={value}
-                        onChange={this._onChange}
-                        readOnly={this.state.readOnly}
-                    />
-                </div>
-                <div className="col-xs-12 col-sm-6 source-pane">
-                    <h3>Source</h3>
-                    <textarea
-                        className="source"
-                        placeholder="Source"
-                        value={value.toString(format)}
-                        onChange={this._onChangeSource}
-                        cols="30"
-                        rows="10"
-                    />
-                </div>
-                <div className="row">
+                <div className="row radio-row">
                     <label className="radio-item">
                         <input
                             type="radio"
@@ -75,6 +51,32 @@ export default class WorkplaceEditor extends Component{
                         <span>Editor is read-only</span>
                     </label>
                 </div>
+                <div className="col-xs-12 col-sm-6 editor-pane">
+
+                    <h3>Editor</h3>
+
+                    <RichTextEditor
+                        className="react-rte"
+                        toolbarClassName="rte-toolbar"
+                        editorClassName="rte-editor"
+                        placeholder="Type away"
+                        value={value}
+                        onChange={this._onChange}
+                        readOnly={this.state.readOnly}
+                    />
+                </div>
+                <div className="col-xs-12 col-sm-6 source-pane">
+                    <h3>Source</h3>
+                    <textarea
+                        className="col-xs-12 source"
+                        placeholder="Source"
+                        value={value.toString(format)}
+                        onChange={this._onChangeSource}
+                        cols="30"
+                        rows="10"
+                    />
+                </div>
+
             </div>
         )
     }

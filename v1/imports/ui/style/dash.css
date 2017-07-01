@@ -1,0 +1,75 @@
+@font-face{
+    font-family: 'Marker Felt';
+    src: url('/fonts/Marker Felt.ttf');
+}
+
+div.modal-header{
+    font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+div.modal-body{
+    padding: 0;
+}
+div.modal-footer {
+    text-align: center;
+}
+.profile-wrapper{
+    margin-top: 20px;
+    text-align: center;
+}
+.emptyBin-container {
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid  rgba(116, 208, 236, 0.89);
+    font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;
+}
+.bin-list-container{
+    margin: 20px 5px 10px 5px;
+}
+.list-bin-name{
+    font-size: 18px;
+}
+.binList{
+    background-color: rgba(116, 208, 236, 0.89);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.binList > h1,
+.binList > .create-bin-row{
+    text-align: center;
+    padding: 10px;
+}
+.bin-headers {
+    font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;
+}
+.binList-item{
+    margin: 5px;
+}
+.shared-count {
+    margin: 5px 15px;
+}
+.shared-count > .fa {
+    padding-right: 5px;
+}
+.tab-list {
+    list-style: none;
+}
+.tab-list li {
+    display: inline-flex;
+}
+.modalFileSelector {
+    cursor: pointer;
+    text-align: center;
+}
+.modalFileSelector:hover {
+    cursor: pointer;
+    background-color: rgba(116, 208, 236, 0.89);
+    color: #eee;
+}
+.modalImage {
+    max-height: 50px;
+    max-width: 100px;
+}

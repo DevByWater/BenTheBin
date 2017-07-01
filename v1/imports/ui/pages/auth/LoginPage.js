@@ -50,7 +50,7 @@ export default class LoginPage extends Component {
                         Log In
                     </button>
                 </div>
-                <div className="form-group container form-redirect-link-container">
+                <div className="form-group form-redirect-link-container">
                     <div className="col-xs-6">
                         <a href="/auth/signup">Need to register?</a>
                     </div>

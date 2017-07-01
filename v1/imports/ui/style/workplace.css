@@ -1,0 +1,17 @@
+@font-face{
+    font-family: 'Marker Felt';
+    src: url('/fonts/Marker Felt.ttf');
+}
+.workplace-container{
+    text-align: center;
+}
+
+.workplace-container > .header {
+    font-family: 'Marker Felt', 'Arial Narrow', Arial, sans-serif;
+    color: #ff6060;
+    margin-bottom: 20px;
+}
+
+.radio-row .radio-item {
+    margin: 10px;
+}

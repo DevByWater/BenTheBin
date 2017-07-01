@@ -8,8 +8,9 @@ export default class DashProfile extends Component{
     render(){
         console.log(this.props)
         return(
-            <div className="profile-wrapper">
+            <div className="panel panel-default profile-wrapper">
                 <h2>{this.props.currentUser.username}</h2>
+                <h5>{this.props.currentUser.emails[0].address}</h5>
             </div>
         )
     }

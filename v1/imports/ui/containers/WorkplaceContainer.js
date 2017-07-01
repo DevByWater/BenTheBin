@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { createContainer } from 'meteor/react-meteor-data'
-import Workplace from '../pages/workplace/Workplace'
 import { Bins } from '../../collections/bins'
 import WorkplaceEditor from '../pages/workplace/WorkplaceEditor'
-import WorkplaceViewer from '../pages/workplace/WorkplaceViewer'
+
+import '../style/workplace.css'
+
 
 class WorkplaceContainer extends Component {
     constructor(props){
@@ -24,7 +25,7 @@ class WorkplaceContainer extends Component {
         }
         return(
             <div className="workplace-container">
-                <h1>Workplace</h1>
+                <h1 className="header">Workplace</h1>
                 <div className="col-xs-12">
                     <WorkplaceEditor bin={bin} />
                 </div>
